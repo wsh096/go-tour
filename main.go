@@ -1,7 +1,10 @@
 package main
 
-import "fmt"
+import (
+  "fmt"
+  "math"
+)
 
 func main() {
-  fmt.Println("Hello, 안녕")
+  fmt.Println("Happy",math.Pi, "Day")//.P//대문자여야 실행됨!!
 }
