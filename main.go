@@ -1,10 +1,9 @@
 package main
 
-import (
-  "fmt"
-  "math"
-)
+import "fmt"
+import "math"
+//이렇게 따로 쓸 수도 있고 import ("fmt" "math")
 
 func main() {
-  fmt.Println("Happy",math.Pi, "Day")//.P//대문자여야 실행됨!!
+  fmt.Printf("Now you have %g problems.",math.Nextafter(2,3))
 }
