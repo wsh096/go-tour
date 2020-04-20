@@ -2,11 +2,12 @@ package main
 
 import "fmt"
 
-func swap(x , y string) (string, string){//int와 같은 type이 뒤에 온다!!//따로 쓸 수도 있고 같으면 뒤에 하나만 쓸 수도 있다.
-  return y, x
+func split(sum int) (x,y int) {
+  x= sum *4/9
+  y= sum -x
+  return 
 }
 
 func main() {
-  a, b:= swap("Hello", "World")
-  fmt.Println(a,b)
+  fmt.Println(split(17))
 }
