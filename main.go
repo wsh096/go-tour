@@ -3,9 +3,9 @@ package main
 import"fmt"
 
 func main(){
-  s:= 0
-  for i:=0; i<10; i++{
-    s += i
+  s:= 1
+  for s<1000 {
+    s += s
   }
   fmt.Println(s)
   
