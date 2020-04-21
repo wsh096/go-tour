@@ -1,13 +1,36 @@
 package main
 
-import "fmt"
+import ("fmt"
+        "math/cmplx"
+)
 
-func Sqrt(x float64) float64{
-  z:=float64(1)//z:=1.0
-  z = z- (z*z-x)/(2*z)//z = z- (z*z-x)/(2*z)(뉴턴의 제곱근 근사값 찾는법)
-  return z
-}
+var(
+  ToBe   bool       = false
+  MaxInt uint64     = 1<<64-1
+  z      complex128 = cmplx.Sqrt(-5 + 12i)
+)
 
 func main(){
-  fmt.Println(Sqrt(2))
+  const f = "%T(%v)\n"//f를 정의해줌 함수의 %T텍스트를 가져와라(%v그 함수의 변수를 가져와라)
+  fmt.Printf(f,ToBe,ToBe)
+  fmt.Printf(f,MaxInt,MaxInt)
+  fmt.Printf(f,z,z)
 }
+
+//go lang의 기본 자료형 값
+
+//bool
+
+//string
+
+//int  int8  int16  int32  int64
+//uint uint8 uint16 uint32 uint64 //uintptr
+
+//byte // uint8의 다른 이름(alias)
+
+//rune // int32의 다른 이름(alias)
+     // 유니코드 코드 포인트 값을 표현합니다. 
+
+//float32 float64
+
+//complex64 complex128_허수
