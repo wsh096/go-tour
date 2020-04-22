@@ -1,12 +1,27 @@
 package main 
-import ( 
+import 
 "fmt"
-"math"
-)
 
 func main(){
-  hypot := func(x,y float64) float64{
-    return math.Sqrt(x*x +y*y)
+  pos, neg := adder(), adder()
+  for i := 0; i<10; i++{
+    fmt.Println(
+      pos(i),
+      neg(-2*i),
+      )
   }
-  fmt.Println(hypot(3,4))
 }
+
+func adder() func(int) int{
+  sum := 0
+  return func(x int) int {
+    sum += x
+    return sum
+  }
+}
+
+//그리고 함수는 클로져(full closures) 입니다.
+
+//코드에서 adder 함수는 클로져(closure)를 반환합니다.
+
+//각각의 클로져는 자신만의 sum 변수를 가집니다.
