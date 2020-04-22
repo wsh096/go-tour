@@ -2,12 +2,13 @@ package main
 
 import "fmt"
 
+var pow = [] int{1,2,4,8,16,32,64,128}
+
 func main(){
-var z [] int
-fmt.Println(z, len(z),cap(z))
-if z== nil {
-  fmt.Println("nil!")
-}
+for i, v:= range pow {
+  fmt.Printf("2**%d = %d\n", i, v)
 }
 
-//빈 슬라이스의 기본 값은 nil인 0,0
+}
+
+//슬라이스에서 range를 사용해 슬라이스 나 맵을 왔다 갔다 할 수 있음 ragne '앞', '뒤'
