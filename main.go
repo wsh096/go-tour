@@ -1,26 +1,19 @@
-package main
+package main 
+import ( 
+    "code.google.com/p/go-tour/wc" 
+    "strings" 
+) 
+func WordCount(s string) map[string]int { 
+    m := make(map[string]int) 
+    for _, v := range strings.Fields(s) { 
+        m[v]++ 
+    } 
+    return m 
+} 
+func main() { 
+    wc.Test(WordCount) 
+}
 
-import "fmt"
-
-func main() {
-  m := make(map[string]int)
-
-  m["Answer"] = 42
-  fmt.Println("The value:", m["Answer"])
-
-  m["Answer"] =48//수정하기!
-  fmt.Println("The value:", m["Answer"])
-
-  delete(m, "Answer")
-  fmt.Println("The value:", m["Answer"]) //요소 지우기
-
-  v, ok := m["Answer"]
-  fmt.Println("The value:", v, "Present?", ok) //존재여부
-
-
-
-  fmt.Println(m)
-  }
 
 //맵 m 의 요소를 삽입하거나 수정하기:
 
